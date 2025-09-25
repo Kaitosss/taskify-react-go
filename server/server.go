@@ -33,6 +33,11 @@ func main() {
 
 	app.Use(logger.New())
 
+	// app.Use(cors.New(cors.Config{
+	// 	AllowOrigins: "http://localhost:5173",
+	// 	AllowHeaders: "Origin,Content-Type,Accept",
+	// }))
+
 	router.SetupRouter(app)
 
 	port := os.Getenv("PORT")
